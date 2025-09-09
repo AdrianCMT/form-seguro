@@ -5,13 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registrar Proyecto</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="body">
   <div class="layout">
     <!-- Sección izquierda -->
     <div class="left">
-      <h1 class="title">Cuéntanos sobre tu proyecto</h1>
-      <p class="desc">Transformamos tu idea en software innovador y de alto impacto</p>
+      <div class="content">
+        <img src="https://agenciacristal.com/wp-content/uploads/2025/01/logofinal_otro.png" alt="Agencia Cristal" class="logo" />
+        <h1 class="title">Cuéntanos sobre tu proyecto</h1>
+        <p class="subtitle">Transformamos tu idea en software innovador y de alto impacto</p>
+      </div>
     </div>
 
     <!-- Sección derecha -->
@@ -19,10 +23,27 @@
       <div class="form-box">
         <h2 class="form-title">Registrar Proyecto</h2>
         <form id="formularioProyecto">
-          <input type="text" placeholder="Nombre del proyecto" required>
-          <input type="text" placeholder="Plazo estimado" required>
-          <textarea placeholder="Descripción del proyecto"></textarea>
-          <button type="submit" class="btn">Enviar Proyecto</button>
+          <div class="input-group">
+            <i class="fa-solid fa-lightbulb icon"></i>
+            <input type="text" placeholder="Nombre del proyecto" required>
+          </div>
+
+          <div class="input-group">
+            <i class="fa-solid fa-calendar-days icon"></i>
+            <input type="text" placeholder="Plazo estimado" required>
+          </div>
+
+          <div class="input-group">
+            <i class="fa-solid fa-align-left icon"></i>
+            <textarea placeholder="Descripción del proyecto"></textarea>
+          </div>
+
+          <div class="input-group">
+            <i class="fa-solid fa-dollar-sign icon"></i>
+            <input type="text" placeholder="Presupuesto estimado ($)">
+          </div>
+
+          <button type="submit" class="btn"><i class="fa-solid fa-paper-plane"></i> Enviar Proyecto</button>
         </form>
       </div>
     </div>
