@@ -11,10 +11,17 @@
   <div class="layout">
     <!-- Sección izquierda -->
     <div class="left">
+      <div class="particles"></div>
+      <div class="bg-image"></div>
+      <div class="overlay"></div>
+
       <div class="content">
-        <img src="https://agenciacristal.com/wp-content/uploads/2025/01/logofinal_otro.png" alt="Agencia Cristal" class="logo" />
+        <div class="logo-box">
+          <img src="https://agenciacristal.com/wp-content/uploads/2025/01/logofinal_otro.png" alt="Agencia Cristal" class="logo" />
+        </div>
         <h1 class="title">Cuéntanos sobre tu proyecto</h1>
         <p class="subtitle">Transformamos tu idea en software innovador y de alto impacto</p>
+        <p class="desc">Una vez enviado, nuestro líder de proyectos recibirá una notificación con tu propuesta para evaluarla y darte una respuesta ágil</p>
       </div>
     </div>
 
@@ -22,6 +29,7 @@
     <div class="right">
       <div class="form-box">
         <h2 class="form-title">Registrar Proyecto</h2>
+
         <form id="formularioProyecto">
           <div class="input-group">
             <i class="fa-solid fa-lightbulb icon"></i>
@@ -30,17 +38,40 @@
 
           <div class="input-group">
             <i class="fa-solid fa-calendar-days icon"></i>
-            <input type="text" placeholder="Plazo estimado" required>
+            <input type="text" placeholder="Plazo estimado (Ej: 3 meses)" required>
           </div>
 
           <div class="input-group">
             <i class="fa-solid fa-align-left icon"></i>
-            <textarea placeholder="Descripción del proyecto"></textarea>
+            <textarea rows="3" placeholder="Descripción del proyecto" required></textarea>
           </div>
 
           <div class="input-group">
             <i class="fa-solid fa-dollar-sign icon"></i>
-            <input type="text" placeholder="Presupuesto estimado ($)">
+            <input type="text" placeholder="Presupuesto estimado ($)" required>
+          </div>
+
+          <div class="checkbox-group">
+            <p><i class="fa-solid fa-layer-group"></i> Categoría del proyecto</p>
+            <label><input type="checkbox"> Web</label>
+            <label><input type="checkbox"> Móviles</label>
+            <label><input type="checkbox"> IA</label>
+            <label><input type="checkbox"> Escritorio</label>
+          </div>
+
+          <div class="input-group">
+            <i class="fa-solid fa-user icon"></i>
+            <input type="text" placeholder="Su nombre" required>
+          </div>
+
+          <div class="input-group">
+            <i class="fa-brands fa-whatsapp icon green"></i>
+            <input type="text" placeholder="Su Whatsapp" required>
+          </div>
+
+          <div class="input-group">
+            <i class="fa-solid fa-envelope icon"></i>
+            <input type="email" placeholder="Su correo" required>
           </div>
 
           <button type="submit" class="btn"><i class="fa-solid fa-paper-plane"></i> Enviar Proyecto</button>
@@ -48,5 +79,7 @@
       </div>
     </div>
   </div>
+
+  
 </body>
 </html>
