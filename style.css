@@ -1,3 +1,18 @@
+/* Reset CSS para quitar bordes y espacios por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
 .body {
   background: #f3f4f6;
   font-family: sans-serif;
@@ -6,6 +21,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 100vh;
+  width: 100%;
+  gap: 0;
+  border: none;
+  outline: none;
 }
 
 /* Izquierda */
@@ -16,6 +35,8 @@
   align-items: center;
   padding: 2.5rem;
   background: linear-gradient(to bottom right, #db2777, #be185d, #6b21a8);
+  border: none;
+  margin: 0;
 }
 .bg-image {
   position: absolute;
@@ -72,7 +93,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border: none;
+  margin: 0;
 }
 .form-box {
   width: 100%;
