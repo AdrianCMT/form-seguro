@@ -1,0 +1,277 @@
+/* Reset CSS para quitar bordes y espacios por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.body {
+  background: #f3f4f6;
+  font-family: sans-serif;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  width: 100%;
+  gap: 0;
+  border: none;
+  outline: none;
+}
+
+/* Izquierda */
+.left {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+  background: linear-gradient(to bottom right, #db2777, #be185d, #6b21a8);
+  border: none;
+  margin: 0;
+}
+.bg-image {
+  position: absolute;
+  inset: 0;
+  background: url("https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=1170")
+    center/cover no-repeat;
+  opacity: 0.2;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+  max-width: 500px;
+}
+.logo {
+  width: 180px;
+  margin-bottom: 1.5rem;
+}
+.title {
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+.subtitle {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #e5e7eb;
+}
+.desc {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #e5e7eb;
+}
+
+/* Partículas */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Derecha */
+.right {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: 0;
+}
+.form-box {
+  width: 100%;
+  max-width: 500px;
+  padding: 2.5rem;
+}
+.form-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #be185d;
+  margin-bottom: 2rem;
+}
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.input-group .icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #db2777;
+}
+.input-group .green {
+  color: #25d366;
+}
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 2rem;
+  border: none;
+  border-bottom: 2px solid #d1d5db;
+  outline: none;
+  font-size: 1rem;
+}
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #db2777;
+}
+
+/* Checkboxes */
+.checkbox-group {
+  margin-bottom: 1.5rem;
+}
+.checkbox-group p {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+.checkbox-group label {
+  display: inline-block;
+  margin: 0.25rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.checkbox-group input {
+  margin-right: 0.25rem;
+}
+
+/* Botón */
+.btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(to right, #db2777, #6b21a8);
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .left {
+    order: 1;
+    min-height: 50vh;
+    padding: 2rem;
+  }
+
+  .right {
+    order: 2;
+    min-height: auto;
+    padding: 2rem;
+  }
+
+  .form-box {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .left {
+    order: 1;
+    min-height: 40vh;
+    padding: 1.5rem;
+  }
+
+  .right {
+    order: 2;
+    flex: 1;
+    padding: 1.5rem;
+    box-shadow: none;
+  }
+
+  .form-box {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .left {
+    min-height: 35vh;
+    padding: 1rem;
+  }
+
+  .right {
+    padding: 1rem;
+  }
+
+  .form-box {
+    padding: 1rem;
+  }
+
+  .logo {
+    width: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .form-title {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.5rem 0.5rem 1.75rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.875rem;
+  }
+}
